@@ -21,30 +21,29 @@ const HolderStats: React.FC = () => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="glass p-6 rounded-xl w-full max-w-4xl mx-auto mt-8"
+      className="glass p-6"
     >
-      <h2 className="text-2xl font-bold text-white mb-6">Holder Statistics</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-        <div className="text-center">
-          <div className="text-gray-400 text-sm">Total Holders</div>
-          <div className="text-white text-xl font-bold">{MOCK_STATS.totalHolders.toLocaleString()}</div>
+      <h2 className="text-xl font-bold brand-text mb-6">Holder Statistics</h2>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="glass p-4">
+          <div className="text-sm text-gray-400 mb-1">Total Holders</div>
+          <div className="text-xl font-bold brand-text">{MOCK_STATS.totalHolders.toLocaleString()}</div>
         </div>
-        <div className="text-center">
-          <div className="text-gray-400 text-sm">Total Supply</div>
-          <div className="text-white text-xl font-bold">{MOCK_STATS.totalSupply}</div>
+        <div className="glass p-4">
+          <div className="text-sm text-gray-400 mb-1">Total Supply</div>
+          <div className="text-xl font-bold brand-text">{MOCK_STATS.totalSupply}</div>
         </div>
-        <div className="text-center">
-          <div className="text-gray-400 text-sm">Circulating Supply</div>
-          <div className="text-white text-xl font-bold">{MOCK_STATS.circulatingSupply}</div>
+        <div className="glass p-4">
+          <div className="text-sm text-gray-400 mb-1">Circulating Supply</div>
+          <div className="text-xl font-bold brand-text">{MOCK_STATS.circulatingSupply}</div>
         </div>
-        <div className="text-center">
-          <div className="text-gray-400 text-sm">Market Cap</div>
-          <div className="text-white text-xl font-bold">{MOCK_STATS.marketCap}</div>
+        <div className="glass p-4">
+          <div className="text-sm text-gray-400 mb-1">Market Cap</div>
+          <div className="text-xl font-bold brand-text">{MOCK_STATS.marketCap}</div>
         </div>
-        <div className="text-center">
-          <div className="text-gray-400 text-sm">Price</div>
-          <div className="text-white text-xl font-bold">{MOCK_STATS.price}</div>
+        <div className="glass p-4">
+          <div className="text-sm text-gray-400 mb-1">Price</div>
+          <div className="text-xl font-bold brand-text">{MOCK_STATS.price}</div>
         </div>
       </div>
     </motion.div>

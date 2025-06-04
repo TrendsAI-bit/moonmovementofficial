@@ -94,6 +94,9 @@
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 76, 29, 149;
+  --brand-yellow: #E6FF00;
+  --background-start: #000000;
+  --background-end: #0A0A0A;
 }
 
 body {
@@ -107,16 +110,17 @@ body {
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0.75rem;
+  border: 1px solid rgba(230, 255, 0, 0.1);
+  border-radius: 1rem;
   transition: all 0.3s ease;
 }
 
 .glass:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(230, 255, 0, 0.2);
+  box-shadow: 0 0 20px rgba(230, 255, 0, 0.1);
 }
 
 .gradient-text {
@@ -124,4 +128,46 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.brand-glow {
+  text-shadow: 0 0 10px rgba(230, 255, 0, 0.5);
+}
+
+.brand-text {
+  color: var(--brand-yellow);
+}
+
+.connect-wallet-btn {
+  background: rgba(230, 255, 0, 0.1);
+  border: 1px solid var(--brand-yellow);
+  color: var(--brand-yellow);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.connect-wallet-btn:hover {
+  background: var(--brand-yellow);
+  color: black;
+  box-shadow: 0 0 20px rgba(230, 255, 0, 0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(230, 255, 0, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(230, 255, 0, 0.3);
 }

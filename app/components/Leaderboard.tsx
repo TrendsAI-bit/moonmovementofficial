@@ -31,26 +31,25 @@ const Leaderboard: React.FC = () => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="glass p-6 rounded-xl w-full max-w-4xl mx-auto mt-8"
+      className="glass p-6"
     >
-      <h2 className="text-2xl font-bold text-white mb-6">Top Holders</h2>
+      <h2 className="text-xl font-bold brand-text mb-6">Top Holders</h2>
       <div className="space-y-4">
         {MOCK_LEADERBOARD.map((entry) => (
           <motion.div
             key={entry.address}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3 }}
-            className="glass rounded-lg p-4 flex items-center justify-between"
+            transition={{ delay: entry.rank * 0.1 }}
+            className="glass p-4 flex items-center justify-between"
           >
             <div className="flex items-center space-x-4">
-              <span className="text-2xl font-bold text-white">#{entry.rank}</span>
+              <span className="text-2xl font-bold brand-text">#{entry.rank}</span>
               <span className="font-mono text-white">{entry.address}</span>
             </div>
             <div className="flex items-center space-x-4">
               <span className="text-gray-400">{entry.holdings} MOON</span>
-              <span className="text-green-400">{entry.percentage}</span>
+              <span className="brand-text">{entry.percentage}</span>
             </div>
           </motion.div>
         ))}
