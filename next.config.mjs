@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['moonmovement.vercel.app'],
+    domains: ['moonmovement.io'],
   },
   // Enable static exports for better performance
   output: 'standalone',
@@ -28,6 +28,10 @@ const nextConfig = {
         ],
       },
     ];
+  },
+  webpack: (config) => {
+    config.resolve.fallback = { fs: false, net: false, tls: false };
+    return config;
   },
 };
 
